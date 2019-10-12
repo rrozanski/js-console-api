@@ -1,0 +1,11 @@
+.code-block {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    margin: 2rem 0;
+    padding: 1rem 1rem;
+    background: #cfdde7;
+    border: 1px dashed #97a3ab;
+    border-radius: 5px;
+    white-space: pre-line;
+}

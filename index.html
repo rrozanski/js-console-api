@@ -1,0 +1,413 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>JS - Console API</title>
+
+  <link rel="stylesheet" href="./css/bootstrap.min.css">
+  <link rel="stylesheet" href="./css/style.css">
+</head>
+<body>
+  <div class="container my-5">
+    <div class="row">
+      <main class="col-12">
+        <header>
+          <h1 class="display-4 mb-5">
+            JS - Console API
+          </h1>
+        </header>
+
+        <section>
+          <h2>
+            console.log
+          </h2>
+          <pre class="code-block">
+            <code>console.log('userId: ', 123);
+            </code>
+          </pre>
+          <button
+              onclick="showLog()"
+              type="button"
+              class="btn btn-success float-right">
+            Run
+          </button>
+        </section>
+
+        <div class="clearfix"></div>
+
+        <hr class="my-5">
+
+        <section>
+          <h2>
+            console.log <span class="text-muted font-weight-normal small font-italic">with styles</span>
+          </h2>
+          <pre class="code-block">
+            <code>console.log('%cHello %cWorld%c!',
+            &nbsp;&nbsp;&nbsp;&nbsp;'font-size: 2rem',
+            &nbsp;&nbsp;&nbsp;&nbsp;'font-size: 2rem; font-style: italic; font-weight: 700; color: orange;',
+            &nbsp;&nbsp;&nbsp;&nbsp;'font-size: 2rem; font-style: normal; font-weight: normal; color: #000000;');
+            </code>
+          </pre>
+          <button
+              onclick="showLogWithStyles()"
+              type="button"
+              class="btn btn-success float-right">
+            Run
+          </button>
+        </section>
+
+        <div class="clearfix"></div>
+
+        <hr class="my-5">
+
+        <section>
+          <h2>
+            console.info
+          </h2>
+          <pre class="code-block">
+            <code>console.info('userId: ', 123);
+            </code>
+          </pre>
+          <button
+              onclick="showInfo()"
+              type="button"
+              class="btn btn-success float-right">
+            Run
+          </button>
+        </section>
+
+        <div class="clearfix"></div>
+
+        <hr class="my-5">
+
+        <section>
+          <h2>
+            console.warn
+          </h2>
+          <pre class="code-block">
+            <code>console.warn('Used method is deprecated!');
+            </code>
+          </pre>
+          <button
+              onclick="showWarn()"
+              type="button"
+              class="btn btn-success float-right">
+            Run
+          </button>
+        </section>
+
+        <div class="clearfix"></div>
+
+        <hr class="my-5">
+
+        <section>
+          <h2>
+            console.error
+          </h2>
+          <pre class="code-block">
+            <code>console.error('User with given ID not found!');
+            </code>
+          </pre>
+          <button
+              onclick="showError()"
+              type="button"
+              class="btn btn-success float-right">
+            Run
+          </button>
+        </section>
+
+        <div class="clearfix"></div>
+
+        <hr class="my-5">
+
+        <section>
+          <h2>
+            console.trace
+          </h2>
+          <pre class="code-block">
+            <code>console.trace('id:', 123);
+            </code>
+          </pre>
+          <button
+              onclick="showTrace()"
+              type="button"
+              class="btn btn-success float-right">
+            Run
+          </button>
+        </section>
+
+        <div class="clearfix"></div>
+
+        <hr class="my-5">
+
+        <section>
+          <h2>
+            console.table
+          </h2>
+          <pre class="code-block">
+            <code>const jsFrameworks = [
+            &nbsp;&nbsp;&nbsp;&nbsp;'Angular',
+            &nbsp;&nbsp;&nbsp;&nbsp;'React',
+            &nbsp;&nbsp;&nbsp;&nbsp;'Vue'
+            ];
+
+            console.table(jsFrameworks);
+            </code>
+          </pre>
+          <button
+              onclick="showTableForArray()"
+              type="button"
+              class="btn btn-success float-right">
+            Run
+          </button>
+          <div class="clearfix"></div>
+          <pre class="code-block">
+            <code>const user = {
+            &nbsp;&nbsp;&nbsp;&nbsp;id: 1,
+            &nbsp;&nbsp;&nbsp;&nbsp;firstName: 'John',
+            &nbsp;&nbsp;&nbsp;&nbsp;lastName: 'User',
+            &nbsp;&nbsp;&nbsp;&nbsp;age: 25
+            };
+
+            console.table(user);
+            </code>
+          </pre>
+          <button
+              onclick="showTableForObject()"
+              type="button"
+              class="btn btn-success float-right">
+            Run
+          </button>
+          <div class="clearfix"></div>
+          <pre class="code-block">
+            <code>const users = [
+            &nbsp;&nbsp;&nbsp;&nbsp;{
+            &nbsp;&nbsp;&nbsp;&nbsp;id: 1,
+            &nbsp;&nbsp;&nbsp;&nbsp;firstName: 'John',
+            &nbsp;&nbsp;&nbsp;&nbsp;lastName: 'Admin',
+            &nbsp;&nbsp;&nbsp;&nbsp;age: 50
+            &nbsp;&nbsp;&nbsp;&nbsp;},
+            &nbsp;&nbsp;&nbsp;&nbsp;{
+            &nbsp;&nbsp;&nbsp;&nbsp;id: 2,
+            &nbsp;&nbsp;&nbsp;&nbsp;firstName: 'John',
+            &nbsp;&nbsp;&nbsp;&nbsp;lastName: 'User',
+            &nbsp;&nbsp;&nbsp;&nbsp;age: 25
+            &nbsp;&nbsp;&nbsp;&nbsp;}
+            ];
+
+            console.table(users);
+            console.table(users, ['firstName', 'age']);
+            </code>
+          </pre>
+          <button
+              onclick="showTableForArrayOfObjects()"
+              type="button"
+              class="btn btn-success float-right">
+            Run
+          </button>
+        </section>
+
+        <div class="clearfix"></div>
+
+        <hr class="my-5">
+
+        <section>
+          <h2>
+            console.dir
+          </h2>
+          <pre class="code-block">
+            <code>const user = {
+            &nbsp;&nbsp;&nbsp;&nbsp;id: 1,
+            &nbsp;&nbsp;&nbsp;&nbsp;firstName: 'John',
+            &nbsp;&nbsp;&nbsp;&nbsp;lastName: 'User',
+            &nbsp;&nbsp;&nbsp;&nbsp;age: 25
+            };
+
+            console.dir(user);
+            </code>
+          </pre>
+          <button
+              onclick="showDir()"
+              type="button"
+              class="btn btn-success float-right">
+            Run
+          </button>
+        </section>
+
+        <div class="clearfix"></div>
+
+        <hr class="my-5">
+
+        <section>
+          <h2>
+            console.dirxml
+          </h2>
+          <pre class="code-block">
+            <code>const container = document.getElementsByClassName('container');
+
+            console.dirxml(container);
+            </code>
+          </pre>
+          <button
+              onclick="showDirXml()"
+              type="button"
+              class="btn btn-success float-right">
+            Run
+          </button>
+        </section>
+
+        <div class="clearfix"></div>
+
+        <hr class="my-5">
+
+        <section>
+          <h2>
+            console.time / console.timeEnd
+          </h2>
+          <pre class="code-block">
+            <code>function fib(num) {
+            &nbsp;&nbsp;&nbsp;&nbsp;if (num <= 1) {
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;return 1
+            &nbsp;&nbsp;&nbsp;&nbsp;}
+
+            &nbsp;&nbsp;&nbsp;&nbsp;return fib(num - 1) + fib(num - 2);
+            }
+
+            console.time('firstResult');
+            console.log(fib(5));
+            console.timeEnd('firstResult');
+
+            console.log('\n----------\n\n');
+
+            console.time('secondResult');
+            console.log(fib(40));
+            console.timeEnd('secondResult');
+
+            console.log('\n----------\n\n');
+            </code>
+          </pre>
+          <button
+              onclick="showTime()"
+              type="button"
+              class="btn btn-success float-right">
+            Run
+          </button>
+        </section>
+
+        <div class="clearfix"></div>
+
+        <hr class="my-5">
+
+        <section>
+          <h2>
+            console.assert
+          </h2>
+          <pre class="code-block">
+            <code>console.assert(true === true, 'True is true, simple.');
+
+            console.assert(true !== true, 'Something is really wrong...');
+            </code>
+          </pre>
+          <button
+              onclick="showAssert()"
+              type="button"
+              class="btn btn-success float-right">
+            Run
+          </button>
+        </section>
+
+        <div class="clearfix"></div>
+
+        <hr class="my-5">
+
+        <section>
+          <h2>
+            console.group / console.groupEnd
+          </h2>
+          <pre class="code-block">
+            <code>console.group('USER DATA');
+            &nbsp;&nbsp;&nbsp;&nbsp;console.log('ID: ', 1);
+            &nbsp;&nbsp;&nbsp;&nbsp;console.log('First Name: ', 'John');
+            &nbsp;&nbsp;&nbsp;&nbsp;console.log('Last Name: ', 'Assert');
+
+            &nbsp;&nbsp;&nbsp;&nbsp;console.group('TOP SECRET');
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;console.log('Login: ', 'john.assert');
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;console.log('Password: ', 'password123');
+            &nbsp;&nbsp;&nbsp;&nbsp;console.groupEnd();
+
+            &nbsp;&nbsp;&nbsp;&nbsp;console.groupCollapsed('NOT IMPORTANT');
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;console.log('a: ', 1);
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;console.log('b: ', 2);
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;console.log('c: ', 3);
+            &nbsp;&nbsp;&nbsp;&nbsp;console.groupEnd();
+            console.groupEnd();
+            </code>
+          </pre>
+          <button
+              onclick="showGroup()"
+              type="button"
+              class="btn btn-success float-right">
+            Run
+          </button>
+        </section>
+
+        <div class="clearfix"></div>
+
+        <hr class="my-5">
+
+        <section>
+          <h2>
+            console.count
+          </h2>
+          <pre class="code-block">
+            <code>const items = [
+            &nbsp;&nbsp;&nbsp;&nbsp;{ id: 1, isActive: false },
+            &nbsp;&nbsp;&nbsp;&nbsp;{ id: 2, isActive: true },
+            &nbsp;&nbsp;&nbsp;&nbsp;{ id: 3, isActive: false },
+            &nbsp;&nbsp;&nbsp;&nbsp;{ id: 4, isActive: false },
+            &nbsp;&nbsp;&nbsp;&nbsp;{ id: 5, isActive: true },
+            ];
+
+            items.forEach((item) => {
+            &nbsp;&nbsp;&nbsp;&nbsp;if (item.isActive) {
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;console.count('active');
+            &nbsp;&nbsp;&nbsp;&nbsp;} else {
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;console.count('inactive');
+            &nbsp;&nbsp;&nbsp;&nbsp;}
+            });
+            </code>
+          </pre>
+          <button
+              onclick="showCount()"
+              type="button"
+              class="btn btn-success float-right">
+            Run
+          </button>
+        </section>
+
+        <div class="clearfix"></div>
+
+        <hr class="my-5">
+
+        <section>
+          <h2>
+            console.clear
+          </h2>
+          <pre class="code-block">
+            <code>console.clear();
+            </code>
+          </pre>
+          <button
+              onclick="clearConsole()"
+              type="button"
+              class="btn btn-success float-right">
+            Run
+          </button>
+        </section>
+      </main>
+    </div>
+  </div>
+
+  <script src="./js/app.js"></script>
+</body>
+</html>
